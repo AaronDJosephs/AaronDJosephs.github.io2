@@ -1,5 +1,4 @@
  faded = false;
- environmental_alive = false;
  csc_alive = false;
  philosophy_alive = false;
  leadership_alive = false;
@@ -25,28 +24,7 @@ fade_in_subs = function () {
   $(".category").addClass("fade-text");
 }
 
-activate_environmental = function () {
-  if (csc_alive == true) { 
-    activate_csc(); 
-  }
-  if (philosophy_alive == true) { 
-    activate_philosophy(); 
-  }
-  if (leadership_alive == true) {
-    activate_leadership();
-  }
-
-  environmental_alive = ! environmental_alive;
-
-  $(".environmental-link").toggleClass("fade-text");
-  $(".environmental").toggleClass("environmental-active");
-  $(".contains-environmental").slideToggle(600);
-}
-
 activate_csc = function () {
-  if (environmental_alive == true) { 
-    activate_environmental(); 
-  }
   if (philosophy_alive == true) { 
     activate_philosophy(); 
   }
@@ -62,9 +40,6 @@ activate_csc = function () {
 }
 
 activate_philosophy = function () {
-  if (environmental_alive == true) { 
-    activate_environmental();
-  }
   if (csc_alive == true) { 
     activate_csc();
   }
@@ -80,9 +55,6 @@ activate_philosophy = function () {
 }
 
 activate_leadership = function () {
-  if (environmental_alive == true) { 
-    activate_environmental();
-  }
   if (csc_alive == true) { 
     activate_csc();
   }
