@@ -68,15 +68,15 @@ a:visited {
  }
  .contains-csc { }
 
- .theatre { }
- .theatre-link:hover {
+ .philosophy { }
+ .philosophy-link:hover {
   color:#009E96;
   cursor:pointer;
  }
- .theatre-active {
+ .philosophy-active {
   color:#009E96
  }
- .contains-theatre { }
+ .contains-philosophy { }
 
  .leadership { }
  .leadership-link:hover {
