@@ -58,17 +58,6 @@ a:visited {
 
 
  /*v categories*/
- .environmental { }
- .environmental-link:hover {
-  color:#008238;
-  cursor:pointer;
- }
- .environmental-active {
-  color:#008238;
- }
- .contains-environmental { }
-
-
  .csc { }
  .csc-link:hover {
   color:#7F001B;
@@ -79,15 +68,15 @@ a:visited {
  }
  .contains-csc { }
 
- .philosophy { }
- .philosophy-link:hover {
+ .theatre { }
+ .theatre-link:hover {
   color:#009E96;
   cursor:pointer;
  }
- .philosophy-active {
+ .theatre-active {
   color:#009E96
  }
- .contains-philosophy { }
+ .contains-theatre { }
 
  .leadership { }
  .leadership-link:hover {
