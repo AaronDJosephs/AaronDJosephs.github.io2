@@ -1,7 +1,6 @@
  faded = false;
- environmental_alive = false;
  csc_alive = false;
- philosophy_alive = false;
+ theatre_alive = false;
  leadership_alive = false;
 
 highlight_present = function () {
@@ -25,30 +24,9 @@ fade_in_subs = function () {
   $(".category").addClass("fade-text");
 }
 
-activate_environmental = function () {
-  if (csc_alive == true) { 
-    activate_csc(); 
-  }
-  if (philosophy_alive == true) { 
-    activate_philosophy(); 
-  }
-  if (leadership_alive == true) {
-    activate_leadership();
-  }
-
-  environmental_alive = ! environmental_alive;
-
-  $(".environmental-link").toggleClass("fade-text");
-  $(".environmental").toggleClass("environmental-active");
-  $(".contains-environmental").slideToggle(600);
-}
-
 activate_csc = function () {
-  if (environmental_alive == true) { 
-    activate_environmental(); 
-  }
-  if (philosophy_alive == true) { 
-    activate_philosophy(); 
+  if (theatre_alive == true) { 
+    activate_theatre(); 
   }
   if (leadership_alive == true) {
     activate_leadership();
@@ -61,10 +39,7 @@ activate_csc = function () {
   $(".contains-csc").slideToggle(600);
 }
 
-activate_philosophy = function () {
-  if (environmental_alive == true) { 
-    activate_environmental();
-  }
+activate_theatre = function () {
   if (csc_alive == true) { 
     activate_csc();
   }
@@ -72,22 +47,19 @@ activate_philosophy = function () {
     activate_leadership();
   }
 
-  philosophy_alive = !philosophy_alive;
+  theatre_alive = !theatre_alive;
 
-  $(".philosophy-link").toggleClass("fade-text");
-  $(".philosophy").toggleClass("philosophy-active");
-  $(".contains-philosophy").slideToggle(600);
+  $(".theatre-link").toggleClass("fade-text");
+  $(".theatre").toggleClass("theatre-active");
+  $(".contains-theatre").slideToggle(600);
 }
 
 activate_leadership = function () {
-  if (environmental_alive == true) { 
-    activate_environmental();
-  }
   if (csc_alive == true) { 
     activate_csc();
   }
-  if (philosophy_alive == true) { 
-    activate_philosophy(); 
+  if (theatre_alive == true) { 
+    activate_theatre(); 
   }
 
   leadership_alive = !leadership_alive;
